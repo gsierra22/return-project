@@ -1,8 +1,9 @@
 import './App.css';
 import Body from './components/Body/Body';
 import axios from 'axios';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 function App() {
+  const[players, setPlayers]=useState([])
 
   useEffect(()=>{
     getName();
@@ -10,12 +11,19 @@ function App() {
 
   const getName =()=>{
     console.log('in getName');
+    axios.get('/players').then((response)=>{
+      console.log(response.data)
+      setPlayers(response.data)
+    }).catch((err)=>{
+      alert('error!');
+      console.log(err);
+    })
   }
 
   return (
     <div className="App">
       <div>Willkommen!</div>
-      <Body test={3*9}/>
+      <Body players={players}/>
     </div>
   );
 }
