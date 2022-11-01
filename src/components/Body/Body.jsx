@@ -7,7 +7,6 @@ function Body(props){
     return(
         <div>
             <h1>Body</h1>
-            <h3>{JSON.stringify(props)}</h3>
             <PlayerList players={props.players} />
         </div>
     )
