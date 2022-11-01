@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import react from "react";
 import PlayerList from "../PlayerList/PlayerList";
+import NewPlayer from "../NewPlayer/NewPlayer";
 
 function Body(props){
     // const[name, setName]= useState(null);
     return(
         <div>
-            <h1>Body</h1>
+            <h1>Rugby Game!</h1>
+            <NewPlayer />
             <PlayerList players={props.players} />
         </div>
     )
