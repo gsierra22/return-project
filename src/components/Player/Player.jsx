@@ -5,8 +5,8 @@ function Player(props){
     // const[name, setName]= useState(null);
     return(
         <div>
-            <h1>Player</h1>
-            <h3>{JSON.stringify(props)}</h3>
+            <h1>{props.player.name}</h1>
+            <p>{props.player.position}</p>
         </div>
     )
 }
