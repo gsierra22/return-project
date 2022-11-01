@@ -8,7 +8,11 @@ function PlayerList(props){
         <div>
             <h1>PlayerList</h1>
             <h3>{JSON.stringify(props)}</h3>
-            <Player/>
+            {
+                props.players.map( player =>(
+                    <Player player={player} />
+                ))
+            }
         </div>
     )
 }
