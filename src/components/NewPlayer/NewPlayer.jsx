@@ -6,8 +6,8 @@ function NewPlayer(props){
     // const[name, setName]= useState(null);
     const[newPlayer, setNewPlayer]= useState({
         name:'',
-        position: '',
-        bio:''
+        position: 'wing',
+        bio:'test'
     });
 
     const addPlayer = () =>{

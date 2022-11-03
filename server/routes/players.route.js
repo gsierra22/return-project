@@ -14,14 +14,14 @@ router.get('/', (req, res)=>{
 
 router.post('/', (req, res)=>{
     console.log('/todo post', req.body);
-    res.send('odano')
-    // const queryString = `SELECT * FROM "team1"`
-    // pool.query(queryString).then((results)=>{
-    //     res.send(results.rows);
-    // }).catch((err)=>{
-    //     console.log(err);
-    //     res.sendStatus(500);
-    // })
+    const queryString = `INSERT INTO "team1"("name","position","bio") VALUES ($1, $2, $3);`
+    const values = [req.body.name, req.body.position, req.body.bio];
+    pool.query(queryString, values).then((results)=>{
+        res.send(results.rows);
+    }).catch((err)=>{
+        console.log(err);
+        res.sendStatus(500);
+    })
 })
 
 
