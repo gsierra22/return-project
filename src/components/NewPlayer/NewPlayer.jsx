@@ -10,12 +10,13 @@ function NewPlayer(props){
     });
 
     const updateNewPlayer=(event)=>{
-        console.log('in updateplayer', event.target.value);
+        setNewPlayer({...newPlayer, name: event.target.value})
     }
     return(
         <div>
             <h1>Add a new player</h1>
             <input type="text" placeholder="name" onChange={(event)=>updateNewPlayer(event)}></input>
+            <p>{JSON.stringify(newPlayer)}</p>
         </div>
     )
 }
