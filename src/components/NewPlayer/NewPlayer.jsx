@@ -3,7 +3,6 @@ import react from "react";
 import axios from "axios";
 
 function NewPlayer(props){
-    // const[name, setName]= useState(null);
     const[newPlayer, setNewPlayer]= useState({
         name:'',
         position: 'wing',
@@ -11,9 +10,7 @@ function NewPlayer(props){
     });
 
     const addPlayer = () =>{
-        console.log('in addplayer');
         axios.post ('/players', newPlayer).then((response)=>{
-            console.log('post', response.data);
             props.getName();
         }).catch((err)=>{
             console.log(err);
