@@ -8,8 +8,8 @@ function Body(props){
     return(
         <div>
             <h1>Rugby Game!</h1>
-            <NewPlayer />
-            <PlayerList players={props.players} />
+            <NewPlayer getName={props.getName}/>
+            <PlayerList players={props.players} getName={props.getName} />
         </div>
     )
 }

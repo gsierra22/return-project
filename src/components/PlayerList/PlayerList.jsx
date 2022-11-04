@@ -10,7 +10,7 @@ function PlayerList(props){
             <h3>{JSON.stringify(props)}</h3>
             {
                 props.players.map( player =>(
-                    <Player player={player} />
+                    <Player player={player} getName={props.getName}/>
                 ))
             }
         </div>

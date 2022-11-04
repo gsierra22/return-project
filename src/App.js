@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <div>Willkommen!</div>
-      <Body players={players}/>
+      <Body players={players} getName={getName}/>
     </div>
   );
 }

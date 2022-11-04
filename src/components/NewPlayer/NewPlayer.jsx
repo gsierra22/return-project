@@ -14,6 +14,7 @@ function NewPlayer(props){
         console.log('in addplayer');
         axios.post ('/players', newPlayer).then((response)=>{
             console.log('post', response.data);
+            props.getName();
         }).catch((err)=>{
             console.log(err);
             alert('error')
@@ -28,7 +29,6 @@ function NewPlayer(props){
             <h1>Add a new player</h1>
             <input type="text" placeholder="name" onChange={(event)=>updateNewPlayer(event)}></input>
             <button onClick={addPlayer}> Add player</button>
-            <p>{JSON.stringify(newPlayer)}</p>
         </div>
     )
 }
