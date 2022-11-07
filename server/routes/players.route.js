@@ -37,6 +37,18 @@ router.post('/', (req, res)=>{
     })
 })
 
+router.put('/:id', (req, res)=>{
+    console.log('/todo PUT', req.params);
+    const queryString = `UPDATE "team1" SET "position"= 'Scrumhalf' WHERE ID=$1;`
+    const values = [req.params.id];
+    pool.query(queryString, values).then((results)=>{
+        res.send(200);
+    }).catch((err)=>{
+        console.log(err);
+        res.sendStatus(500);
+    })
+})
 
+//UPDATE "team1" SET "position"= 'Scrumhalf' WHERE ID=2;
 
 module.exports = router;
