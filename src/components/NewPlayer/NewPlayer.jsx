@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
+import './NewPlayer.css';
 
 function NewPlayer(props){
     const[newPlayer, setNewPlayer]= useState({
@@ -25,8 +26,12 @@ function NewPlayer(props){
     return(
         <div>
             <h1>Add a new player</h1>
-            <input type="text" placeholder="name" onChange={(event)=>updateNewPlayer(event)}></input>
-            <Button onClick={addPlayer}> Add player</Button>
+            <Form>
+            <input 
+            className="AddPlayerForm" type="text" placeholder="name" onChange={(event)=>updateNewPlayer(event)}>  
+            </input>
+            <Button className="AddPlayerButton" onClick={addPlayer}> Add player</Button>
+            </Form>
         </div>
     )
 }
