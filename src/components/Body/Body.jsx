@@ -7,7 +7,8 @@ function Body(props){
     // const[name, setName]= useState(null);
     return(
         <div>
-            <h1>Rugby Game!</h1>
+            <h1>Rugby</h1>
+            <h2>Team 1 vs Team 2</h2>
             <NewPlayer getName={props.getName}/>
             <PlayerList players={props.players} getName={props.getName} />
         </div>
