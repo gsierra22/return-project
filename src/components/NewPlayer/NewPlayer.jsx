@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
+import { Button } from "react-bootstrap";
 
 function NewPlayer(props){
     const[newPlayer, setNewPlayer]= useState({
@@ -25,7 +26,7 @@ function NewPlayer(props){
         <div>
             <h1>Add a new player</h1>
             <input type="text" placeholder="name" onChange={(event)=>updateNewPlayer(event)}></input>
-            <button onClick={addPlayer}> Add player</button>
+            <Button onClick={addPlayer}> Add player</Button>
         </div>
     )
 }
