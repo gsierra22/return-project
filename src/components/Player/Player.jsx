@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
+import {Button} from 'react-bootstrap';
 
 function Player(props){
     // const[name, setName]= useState(null);
@@ -27,8 +28,8 @@ function Player(props){
         <div>
             <h1>{props.player.name}</h1>
             <p>{props.player.position}</p>
-            <button onClick={changeName}>Change Name</button>
-            <button onClick={deletePlayer}>Delete</button>
+            <Button onClick={changeName}>Change Name</Button>
+            <Button variant="primary" onClick={deletePlayer}>Delete</Button>
         </div>
     )
 }
