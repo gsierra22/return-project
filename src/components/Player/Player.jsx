@@ -7,7 +7,6 @@ function Player(props){
     // const[name, setName]= useState(null);
     const changeName = () =>{
         axios.put(`/players/${props.player.id}`).then ((response) =>{
-            console.log('PUT', response);
             props.getName();
         }).catch((err)=>{
             alert('put error');
@@ -17,7 +16,6 @@ function Player(props){
     
     const deletePlayer = () =>{
         axios.delete(`/players/${props.player.id}`).then ((response) =>{
-            console.log('delete', response);
             props.getName();
         }).catch((err)=>{
             alert('delete error');
