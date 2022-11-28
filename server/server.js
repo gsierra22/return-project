@@ -9,7 +9,7 @@ app.use( bodyParser.json() );
 app.use('/players', players)
 
 //globals
-const port = 5000;
+const port = 5001;
 
 //spin up server
 app.listen(port, ()=>{
