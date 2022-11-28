@@ -7,7 +7,6 @@ function Team2(props){
     // const[name, setName]= useState(null);
     return(
         <div>
-            <h1>Team 2</h1>
             <h1>{props.player.name}</h1>
             <p>{props.player.position}</p>
             <Button>Change Name</Button>
