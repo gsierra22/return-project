@@ -8,7 +8,6 @@ function Team2(props){
     return(
         <div>
             <h1>Team 2</h1>
-            <h3>{JSON.stringify(props)}</h3>
             <h1>{props.player.name}</h1>
             <p>{props.player.position}</p>
             <Button>Change Name</Button>

@@ -7,7 +7,6 @@ function Team2List(props){
     return(
         <div>
             <h1>Team 2 List</h1>
-            <h3>{JSON.stringify(props)}</h3>
             {
                 props.players.map( player =>(
                     <Team2 player={player} getName={props.getName}/>
